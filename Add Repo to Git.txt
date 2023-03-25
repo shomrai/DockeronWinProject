@@ -1,0 +1,24 @@
+ONCE: per computer: 
+   1.  Settings → Developer Settings → Personal Access Token
+                    → Generate New Token (Give your password) → Enter date and
+                      → Add all permissions and fill form → click Generate token
+                       → SAVE *** Token ***
+    2. Copy token into a "Windows Credential"
+        Control Panel → Credential Manager → Add Windows Credentials → URL: git:https://github.com 
+                     → Password <= *** Token ***
+
+For each "Repo"
+
+1.  Create Your new GiHub (remote) repo
+
+3. CMD 
+   CD to <Your local repo> (    git init; git add . ;  git commit;  git commit    ......)
+   git remote add origin https://github.com/<Your-GitHubUser>/<Repo>.git
+(Change "origin" to "main")
+   git branch -M main
+   git push -u origin main
+   or 
+   git remote add --mirror=push origin https://github.com/shomrai/<Your-Repo>.git
+Check Your target repo in Github:
+   git remote -v
+  
